@@ -1,56 +1,54 @@
-🚀 INTERNSMO INTERNSHIP
-Welcome to my Internsmo Internship Repository!
+# 🚀 Internsmo Internship
 
-This repository documents my learning journey and practical work as a Full Stack Development Intern at Internmo.
+Welcome to my internship repository! I’m documenting my learning journey and practical work as a **Full Stack Development Intern at Internmo**.
 
-Throughout this 3-month internship, I will be working on various assignments and projects to enhance my technical knowledge, strengthen my development skills, and gain hands-on experience in Full Stack Development.
+Over this three-month internship, I’ll work through assignments and a final project to build my development skills and gain hands-on experience. I’ll update this README as the work and technologies take shape.
 
-📌 Internship Details
-Details	Information
-Organization	Internmo
-Internship Role	Full Stack Development Intern
-Duration	3 Months
-Start Date	05 October 2026
-End Date	05 January 2027
-Internship Type	Learning & Development
-📂 Repository Structure
+## 📌 Internship details
+
+| Detail | Information |
+| --- | --- |
+| Organization | Internmo |
+| Role | Full Stack Development Intern |
+| Duration | 3 months |
+| Start date | 05 October 2026 |
+| End date | 05 January 2027 |
+| Type | Learning & Development |
+
+## 🎯 Goals
+
+- Build practical full stack development skills.
+- Learn real-world web development workflows.
+- Strengthen frontend, backend, and problem-solving abilities.
+- Apply what I learn through assignments and a final project.
+
+## 🗂️ Repository structure
+
+```text
 INTERNSMO-INTERNSHIP/
-│
 ├── ASSIGNMENT-1/
-│
 ├── ASSIGNMENT-2/
-│
 ├── ASSIGNMENT-3/
-│
 └── FINAL-PROJECT/
-🎯 Internship Objectives
-Develop practical skills in Full Stack Development.
-Understand real-world web development workflows.
-Improve frontend and backend development skills.
-Strengthen programming and problem-solving abilities.
-Gain hands-on experience through practical assignments.
-Build and complete a final project demonstrating the skills learned.
-📚 Assignments & Projects
-1. ASSIGNMENT-1
-First assignment of the internship.
+```
 
-2. ASSIGNMENT-2
-Second assignment focusing on practical development and learning.
+## 📚 Assignments & project
 
-3. ASSIGNMENT-3
-Third assignment to further improve technical and development skills.
+- **ASSIGNMENT-1** — First internship assignment.
+- **ASSIGNMENT-2** — Practical development and learning.
+- **ASSIGNMENT-3** — Further practice and skill development.
+- **FINAL-PROJECT** — A project bringing together skills gained during the internship.
 
-4. FINAL-PROJECT
-The final project demonstrating the knowledge and practical skills gained throughout the internship.
+Details will be added as each item progresses.
 
-🛠️ Technologies & Tools
-The programming languages, frameworks, libraries, and development tools used during the internship will be updated here as I progress.
+## 🛠️ Technologies & tools
 
-📈 Learning & Progress
-This repository serves as a record of my progress, practical experience, completed assignments, and final project throughout my internship at Internmo.
+I’ll add the languages, frameworks, libraries, and tools used here as the internship progresses.
 
-I look forward to learning new technologies, solving challenges, and continuously improving my Full Stack Development skills.
+## 📈 Learning journey
 
-Internship Journey: Learn | Practice | Build | Grow 🚀
+This repository will track my progress, completed work, and lessons learned along the way.
 
-Thank you for visiting my repository!
+**Learn · Practice · Build · Grow** 🚀
+
+Thanks for visiting!
