@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Four-role RBAC evidence</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font: 16px "Segoe UI", Arial, sans-serif;
+      color: #17233b;
+      background: #f3f6fa;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 36px;
+      border-radius: 18px;
+      background: white;
+      box-shadow: 0 12px 40px #1c36551c;
+    }
+
+    h1 { margin: 0 0 8px; }
+    h2 { margin-top: 30px; }
+    .sub, .foot { color: #60708a; }
+    .score {
+      display: inline-block;
+      margin: 22px 0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: #e4f7ec;
+      color: #137441;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .roles {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .role {
+      padding: 16px;
+      border-radius: 10px;
+      background: #f2f5fa;
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #e6ebf2;
+      text-align: left;
+    }
+
+    th { background: #f2f5fa; }
+    .pass { color: #137441; font-weight: 700; }
+    .foot { margin-top: 26px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Four-role RBAC evidence</h1>
+    <div class="sub">Actual local HTTP and authenticated Socket.IO request run · 2026-11-02 19:08 UTC</div>
+    <div class="score">240 / 240 PASS · 0 FAIL</div>
+
+    <div class="roles" aria-label="Tested roles">
+      <div class="role">Listener</div>
+      <div class="role">Co-DJ <small>(lounge-scoped)</small></div>
+      <div class="role">Host</div>
+      <div class="role">Admin</div>
+    </div>
+
+    <h2>Expired Soundclash resolution</h2>
+    <table>
+      <thead>
+        <tr><th>Role</th><th>HTTP result</th><th>Observed outcome</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Listener</td><td>403</td><td>Access denied as expected</td></tr>
+        <tr><td>Co-DJ (lounge-scoped)</td><td class="pass">200</td><td>Battle resolved</td></tr>
+        <tr><td>Host</td><td class="pass">200</td><td>Battle resolved</td></tr>
+        <tr><td>Admin</td><td class="pass">200</td><td>Battle resolved</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Authenticated Socket.IO checks</h2>
+    <table>
+      <thead>
+        <tr><th>Event</th><th>Observed coverage</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>lounge:join</code> / <code>lounge:sync</code></td><td>All four roles joined</td></tr>
+        <tr><td><code>lounge:playback:control</code></td><td>Listener and Co-DJ denied; Host and Admin allowed</td></tr>
+        <tr><td><code>lounge:ping</code> / <code>lounge:pong</code></td><td>All four roles</td></tr>
+        <tr><td><code>lounge:typing</code></td><td>Broadcast observed by another member</td></tr>
+        <tr><td><code>lounge:leave</code></td><td>Presence departure broadcast to remaining members</td></tr>
+      </tbody>
+    </table>
+
+    <div class="foot">
+      Temporary spotify_rbac_test database was dropped after execution.
+      Runner: server/scripts/rbacEvidenceRunner.js. Scope and limitations:
+      see RBAC_EVIDENCE.md.
+    </div>
+  </main>
+</body>
+</html>
